@@ -1,0 +1,345 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/css/all.min.css">
+    <title>Document</title>
+    <style>
+        header {
+            width: 100%;
+            height: 100%;
+        }
+
+        .container {
+            display: grid;
+            grid-template-areas:
+                'navbar navbar social '
+                'icon icon icon'
+            ;
+        }
+
+        #navbar {
+            grid-area: navbar;
+
+        }
+
+        span {
+            margin: 18px;
+        }
+
+        header::before {
+            content: "";
+            position: absolute;
+            background: url('https://source.unsplash.com/collection/190727/1600x900');
+            background-position: center;
+            background-size: cover;
+            overflow: visible;
+            top: 0;
+            left: 0;
+            opacity: 0.6;
+            z-index: -1;
+            width: 100%;
+            height: 100vh;
+        }
+
+        .social {
+            grid-area: social;
+            display: flex;
+            flex-direction: column;
+            list-style: none;
+        }
+
+        .social li a {
+            display: flex;
+            margin-top: 10px;
+            justify-content: end;
+        }
+
+        .icon {
+            display: grid;
+            justify-content: center;
+        }
+
+        img {
+            grid-area: img;
+            width: 40px;
+            height: 40px;
+            border-radius: 20px;
+            transform: rotate(30deg);
+
+        }
+
+        .contact {
+            text-align: center;
+            display: flex;
+            flex-direction: column;
+        }
+
+        .links {
+            display: flex;
+            flex-direction: row;
+            justify-content: center;
+
+        }
+
+        .cert {
+            width: 300px;
+            height: 200px;
+
+            margin-right: 50px;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+        }
+
+        .web {
+            width: 300px;
+            height: 200px;
+
+            margin-left: 50px;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+
+        }
+
+        h1 {
+            font-size: 1rem;
+        }
+
+        footer {
+            position: absolute;
+            bottom: 0px;
+            left: 500px;
+            text-align: center;
+
+        }
+
+        .container #navbar span a {
+            text-decoration: none;
+            color: black;
+        }
+
+        .container #navbar span a:hover {
+            color: white;
+            background-color: black;
+            box-shadow: 2px 2px indigo;
+        }
+
+        .container .social li a {
+            text-decoration: none;
+        }
+
+        #whatsapp {
+            color: green;
+        }
+
+        #twitter {
+            color: lightblue;
+
+        }
+
+        #facebook {
+            color: blue;
+        }
+
+        #insta {
+            color: pink;
+        }
+
+        /* Navbar */
+        .navbar {
+            position: absolute;
+            top: 50px;
+            left: 0px;
+            width: 100%;
+            height: 60px;
+            display: flex;
+
+
+        }
+
+        .certificates .links .cert a {
+            background-color: orange;
+            width: 200px;
+            margin-top: 4px;
+            border-radius: 6px;
+            text-decoration: none;
+            font-size: 1.5rem;
+        }
+
+        .certificates .links .cert a:hover {
+            color: black;
+
+        }
+
+        .certificates .links .web a {
+            background-color: lightgreen;
+            width: 200px;
+            margin-top: 4px;
+            border-radius: 6px;
+            text-decoration: none;
+            font-size: 1.5rem;
+
+        }
+
+        .certificates .links .web a {
+            background-color: lightgreen;
+
+            border-radius: 6px;
+            text-decoration: none;
+
+        }
+
+        .certificates .links .web a:hover {
+            color: black;
+
+
+        }
+
+        .cert .page {
+            margin-top: 4px;
+
+            text-align: center;
+        }
+
+        .web .weblink {
+            width: 200px;
+            margin-top: 8px;
+            text-align: center;
+        }
+
+        .contact .About #para {
+            font-size: 1.5rem;
+        }
+
+        @media only screen and (min-width:1px) and (max-width:1200px) {
+            header {
+                width: 100%;
+                height: 194vh;
+            }
+
+            header::before {
+                content: "";
+                position: absolute;
+                background: url('https://source.unsplash.com/collection/190727/1600x900');
+                background-position: center;
+                background-size: cover;
+                overflow: visible;
+                top: 0;
+                left: 0;
+                opacity: 0.6;
+                z-index: -1;
+                width: 100%;
+                height: 200vh;
+            }
+
+            span {
+                display: block;
+                font-size: 1.2rem;
+                text-align: center;
+            }
+
+            #navbar {
+                position: absolute;
+                font-size: 0.6rem;
+                top: 0;
+                left: 0;
+            }
+
+            .links {
+                display: flex;
+                flex-direction: column;
+                justify-content: center;
+                align-items: center;
+
+            }
+
+            .cert {
+                width: 200px;
+                height: 200px;
+
+                align-items: center;
+                margin-right: 0px;
+            }
+
+            .web {
+                width: 200px;
+                height: 200px;
+
+
+                margin-left: 0px;
+                align-items: center;
+
+            }
+
+            footer {
+                position: relative;
+                bottom: 0;
+                left: 0;
+                font-size: 0.6rem;
+            }
+
+        }
+    </style>
+</head>
+
+<body>
+    <header>
+        <div class="container">
+            <div id="navbar"><span><a id="nav" href="">Home</a></span><span><a href="">About</a></span><span><a
+                        href="">Gallery</a></span><span><a href="">Contact Us</a></span></div>
+            <ul class="social">
+                <li><a id="facebook" href="http://facebook.com"><i id="facebook"
+                            class="fa-brands fa-facebook-square"></i></a></li>
+                <li><a href="http://whatsapp.com"><i id="whatsapp" class="fa-brands fa-whatsapp-square"></i></a>
+                </li>
+                <li><a href="http://twitter.com"><i id="twitter" class="fa-brands fa-twitter-square"></i></a></li>
+                <li><a href="http://instagram.com"><i id="insta" class="fa-brands fa-instagram-square"></i></a></li>
+            </ul>
+        </div>
+        <div class="icon">
+            <img src="Profile.jpg" alt="">
+        </div>
+        <div class="contact">
+            <div class="About">
+                <strong>Inzamamul Haque</strong>
+
+                <p id="para">
+                    • Started learning HTML recently.<br>
+                    • I like playing chess.<br>
+
+                    • I work on my typing skills daily</p>
+            </div>
+        </div>
+        <div class="certificates">
+            <div class="links">
+                <div class="cert">
+                    <h1>Qualifications</h1>
+                    <div class="page"><a href="">Matriculation</a></div>
+                    <div class="page"><a href="">Intermediate</a></div>
+                    <div class="page"><a href="">B.E</a></div>
+                    <div class="page"><a href="">MyResume</a></div>
+                </div>
+                <div class="web">
+                    <h1>My Other Web Pages</h1>
+                    <div class="weblink"><a href="https://inzamamulhaque09.github.io/LibraryMain/" target="_blank">My
+                            Lib</a></div>
+                    <div class="weblink"><a href="https://inzamamulhaque09.github.io/MyResume2/" target="_blank">My
+                            Resume</a></div>
+                </div>
+            </div>
+        </div>
+    </header>
+    <footer>
+        <div class="footer">
+            Copyright &copy;www.MyInfo.com.All Rights reserved.
+        </div>
+    </footer>
+
+</body>
+
+</html>
